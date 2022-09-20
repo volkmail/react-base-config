@@ -1,0 +1,53 @@
+{
+    "root": true,
+    "settings": {
+      "import/resolver": {
+        "alias": {
+          "map": [
+            [
+              "src",
+              "./src"
+            ]
+          ],
+          "extensions": [
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "globals": {
+      "JSX": true
+    },
+    "extends": [
+      "airbnb",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "react",
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-filename-extension": "off",
+      "react/function-component-definition": "off",
+      "react/require-default-props": "off",
+      "import/no-unresolved": "error",
+      "import/prefer-default-export": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-duplicate-imports": "error"
+    }
+  }
