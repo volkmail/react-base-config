@@ -1,27 +1,54 @@
 {
-    "include": ["src"],
-    "exclude": [
-      "build",
-      "node_modules"
+  "include": [
+    "src/**/*",
+    "src/custom.d.ts"
+  ],
+  "exclude": [
+    "build",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "esnext"
     ],
-    "compilerOptions": {
-      "module": "esnext",
-      "lib": ["dom", "esnext"],
-      "importHelpers": true,
-      "declaration": true,
-      "sourceMap": true,
-      "rootDir": "./src",
-      "outDir": "./build/esm",
-      "baseUrl": "./",
-      "strict": true,
-      "noImplicitReturns": true,
-      "noFallthroughCasesInSwitch": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "moduleResolution": "node",
-      "jsx": "react",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-    }
+    "importHelpers": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@redux/*": [
+        "src/redux/*"
+      ],
+      "@actions/*": [
+        "src/redux/actions/*"
+      ],
+      "@thunks/*": [
+        "src/redux/thunks/*"
+      ],
+      "@selectors/*": [
+        "src/redux/selectors/*"
+      ],
+      "@api/*": [
+        "src/api/*"
+      ]
+    },
+    "strict": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true
   }
+}

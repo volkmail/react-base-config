@@ -1,0 +1,7 @@
+{
+  "targets": "> 0.25%, not dead",
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
